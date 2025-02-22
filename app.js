@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const connectToDb = require('./db/db');
 const userRoutes = require('./routes/user.routes');
 
-connectToDb();
+
 app.use(
   cors({
     origin: "http://localhost:5173", // Frontend URL
