@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema({
     },
     height: {
         type: Number,
-        required: [true, 'Please provide your height in cm']
+        required: [true, 'Please provide your height in cm ']
     },
     gender: {
         type: String,
