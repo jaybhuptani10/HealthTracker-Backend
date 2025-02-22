@@ -18,8 +18,8 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use('/', (req, res) => {
-  res.json("Hell");
+app.get("/", (req, res) => {
+  res.json("Hello, Server is Running!");
 });
 app.use('/user', userRoutes);
 module.exports = app;
