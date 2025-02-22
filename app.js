@@ -18,8 +18,8 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.get('/', (req, res) => {
-  res.send('Hello World kese ho');
+app.use('/', (req, res) => {
+  res.json("Hell");
 });
 app.use('/user', userRoutes);
 module.exports = app;
