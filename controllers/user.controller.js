@@ -2,6 +2,7 @@ const usermodel = require('../models/user.model');
 const userService = require('../services/user.service');
 const {validationResult} = require('express-validator');
 const blacklisttokenModel = require('../models/blacklisttoken.model');
+const { sendEmail } = require('../services/email.services');
 
 module.exports.registerUser = async (req, res, next) => {
     try {
@@ -59,6 +60,8 @@ module.exports.loginUser = async(req,res,next)=>{
     }
 
     const token = user.generateAuthToken();
+    await sendEmail(email, "Welcome!", "Thank you for Logging!");
+    console.log("Email sent to: ", email);
 
     res.cookie('token',token,{httpOnly:true});
 
