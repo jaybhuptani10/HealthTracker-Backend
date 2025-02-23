@@ -10,7 +10,7 @@ const userRoutes = require('./routes/user.routes');
 
 app.use(
   cors({
-    origin: "*", // Frontend URL
+    origin: ["http://localhost:5173","https://health-tracker-backend-jet.vercel.app/"], // Frontend URL
     credentials: true, // Allow cookies and authentication headers
   })
 );
