@@ -10,7 +10,7 @@ const userRoutes = require('./routes/user.routes');
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Frontend URL
+    origin: "*", // Frontend URL
     credentials: true, // Allow cookies and authentication headers
   })
 );
