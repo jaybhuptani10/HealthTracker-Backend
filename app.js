@@ -6,6 +6,7 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const connectToDb = require('./db/db');
 const userRoutes = require('./routes/user.routes');
+const fallR = require('./routes/fall.routes');
 
 
 app.use(
@@ -22,4 +23,5 @@ app.get("/", (req, res) => {
   res.json("Hello, Server is Running!");
 });
 app.use('/user', userRoutes);
+app.use('/falldetection',fallR)
 module.exports = app;
