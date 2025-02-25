@@ -4,7 +4,7 @@ module.exports.fallRisk = async (req, res, next) => {
     try {
         const { fallDetected } = req.body;
 
-        if (!deviceId || fallDetected === undefined) {
+        if (fallDetected === undefined) {
             return res.status(400).json({ message: "Missing required fields" });
         }
 
