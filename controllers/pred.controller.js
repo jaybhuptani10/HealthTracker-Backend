@@ -2,9 +2,9 @@ const { sendEmail } = require("../services/email.services");
 
 module.exports.fallRisk = async (req, res, next) => {
     try {
-        const { fallDetected } = req.body;
+        const { email, fallDetected } = req.body;
 
-        if (fallDetected === undefined) {
+        if (!email || fallDetected === undefined) {
             return res.status(400).json({ message: "Missing required fields" });
         }
 
