@@ -11,7 +11,7 @@ module.exports.fallRisk = async (req, res, next) => {
         if (fallDetected) {
             console.log(`⚠️ Fall detected`);
             await sendEmail(email, "Fall detected", "A fall has been detected");
-            await sendEmail("jaybhuptani1054@gmail.com", "Fall detected", "A fall has been detected");
+            await sendEmail("jaybhuptani1054@gmail.com", "Fall detected", "A fall has been detected for User Varun jethani");
             // Here you can add logic to send alerts, store data, etc.
         }
 
